@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DT Threadbuilder — Reason Validator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="rules-card">
+      <h1>Validation Rules</h1>
+      <ol>
+        <li>The reason must contain <strong>at least 5 words</strong>.</li>
+        <li>It must include at least one keyword: <strong>"because"</strong>, <strong>"so"</strong>, or <strong>"therefore"</strong>.</li>
+        <li>You has <strong>3 attempts</strong> to submit a valid reason.</li>
+      </ol>
+    </section>
+
+    <section class="form-card">
+      <label for="reason" class="label">Enter your reason:</label>
+      <textarea id="reason" placeholder="Type your reason here..."></textarea>
+
+      <div class="controls">
+        <button id="submitBtn" class="btn">Submit Reason</button>
+        <button id="resetBtn" class="btn ghost">Reset Attempts</button>
+      </div>
+
+      <div id="status" class="status" aria-live="polite"></div>
+      <div class="meta">
+        Attempts left: <span id="attempts">3</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

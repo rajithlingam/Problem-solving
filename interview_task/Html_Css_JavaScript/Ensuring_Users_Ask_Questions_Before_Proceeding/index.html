@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Question Collector — Learning Assistant</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main class="card">
+      <h1>Ask at least 3 unique questions</h1>
+      <p>
+        Enter your questions below. You must provide
+        <strong>3 different</strong> questions before you can proceed to the
+        next module.
+      </p>
+
+      <form id="qForm" onsubmit="return false;">
+        <div id="inputs" class="inputs">
+          <!-- three default inputs -->
+          <div class="row">
+            <input type="text" name="q" placeholder="Question 1" autocomplete="off" />
+          </div>
+          <div class="row">
+            <input type="text" name="q" placeholder="Question 2" autocomplete="off" />
+          </div>
+          <div class="row">
+            <input type="text" name="q" placeholder="Question 3" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="addBtn" class="btn-add" type="button">
+            + add question
+          </button>
+          <button id="validateBtn" class="btn-validate" type="button">
+            Validate & Proceed
+          </button>
+          <div class="small">(Empty inputs are ignored)</div>
+        </div>
+      </form>
+
+      <div id="messageArea"></div>
+      <div class="hint">
+        If a duplicate is detected all responses will be cleared — please ask
+        different questions.
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+
+</html>

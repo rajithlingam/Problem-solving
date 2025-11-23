@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Notes — Gamified</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <section class="card">
+        <header class="card-header">
+          <div>
+            <h1 class="title">Meeting Insights</h1>
+            <p class="subtitle">Capture ideas, get rewarded 🎯</p>
+          </div>
+
+          <!-- Score + Classification column -->
+          <div style="text-align:right">
+            <div class="score-pill" id="score">Your current score is 0</div>
+            <div id="classification" class="classification">Needs Encouragement</div>
+          </div>
+        </header>
+
+        <div class="input-area">
+          <label for="noteInput" class="sr-only">Write note</label>
+          <textarea id="noteInput" placeholder="Write an insight from the meeting..." maxlength="500"></textarea>
+
+          <div class="controls">
+            <button id="addBtn" class="btn primary">Add Note</button>
+            <button id="clearBtn" class="btn ghost">Clear All</button>
+          </div>
+
+          <div id="message" class="message">Reminder: Please add notes!</div>
+        </div>
+
+        <section class="notes">
+          <h2 class="notes-title">Notes <span id="count" class="badge">0</span></h2>
+          <ul id="noteList" class="note-list"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+
+</html>
